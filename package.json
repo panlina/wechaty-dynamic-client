@@ -1,0 +1,8 @@
+{
+  "name": "wechaty-dynamic-client",
+  "version": "0.0.0",
+  "description": "wechaty-dynamic client",
+  "keywords": ["wechaty", "dynamic", "client"],
+  "author": "Jack Lu <jacklu@jacklu.me>",
+  "license": "ISC"
+}
