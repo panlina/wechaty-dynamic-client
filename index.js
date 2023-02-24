@@ -10,7 +10,17 @@ var [, , endpoint] = process.argv;
 	for await (var line of rl) {
 		if (line == 'exit') break;
 		var args = shellQuote.parse(line);
-		if (args[0] == 'add' && args.length == 3) {
+		if (args[0] == 'ls' && args.length == 1) {
+			try {
+				var response = await axios.get(`${endpoint}/plugin`);
+				var plugin = response.data;
+				for (var name in plugin)
+					console.log(name, '\t', plugin[name].module);
+			} catch (e) {
+				console.error("error");
+			}
+		}
+		else if (args[0] == 'add' && args.length == 3) {
 			var [, name, module] = args;
 			try {
 				await axios.put(`${endpoint}/plugin/${name}`, { module: module }, { headers: { "Content-Type": "application/json" } });
