@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var readline = require('readline');
 var shellQuote = require('shell-quote');
 var { default: axios } = require('axios');
