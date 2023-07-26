@@ -31,7 +31,7 @@ var [, , endpoint] = process.argv;
 				console.error("error");
 			}
 		}
-		else if (args[0] == 'remove' && args.length == 2) {
+		else if (args[0] == 'rm' && args.length == 2) {
 			var [, name] = args;
 			try {
 				await axios.delete(`${endpoint}/plugin/${name}`);

@@ -11,6 +11,6 @@ b	/b.js
 c	/c.js
 > add a /a.js
 added a
-> remove a
+> rm a
 removed a
 ```
